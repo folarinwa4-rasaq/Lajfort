@@ -1,0 +1,115 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <img class="laj-logo" src="{% static 'images/Lajfort-logo.png' %}" alt="">
+            <ul>
+                <li><a href="/" class="home-link">Home</a></li>
+                <li><a href="about">About</a></li>
+                <Li><a href="gallery">Gallery</a></Li>
+                <li><a href="contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="contact">
+        <h1>Contact Us</h1>
+        <div class="message">
+            <div class="message-box">
+                <div>
+                    <h3>Leave Us A Message</h3>
+                    <form action="message" id="post-form" method="post">
+                        {% csrf_token %}
+                        <input type="text" name="name" id="name" class="message-name" placeholder="Name"><br>
+                        <input type="email" name="email" id="email" class="message-email" placeholder="Email Address"><br>
+                        <input type="text" name="message" id="message" class="message-content" placeholder="Your Message"><br>
+                        <input type="submit" class="send" value="Send">
+                    </form>
+                </div>
+                <div>
+                    <h5><span><img src="{% static 'images/Lajfort-contact-location.png' %}" alt=""></span>Ota<br>Ogun</h5>
+                    <h5><span><img src="{% static 'images/Lajfort-contact-phone.png' %}" alt=""></span>+234 081-1236-1234</h5>
+                    <h5><span><img src="{% static 'images/Lajfort-contact-email.png' %}" alt=""></span>www.lajfort.com</h5>
+                    <div class="contact-social">
+                        <img src="{% static 'images/Lajfort-contact-youtube.png' %}" alt="">
+                        <img src="{% static 'images/Lajfort-contact-instagram.png' %}" alt="">
+                        <img src="{% static 'images/Lajfort-contact-facebook.png' %}" alt="">
+                        <img src="{% static 'images/Lajfort-contact-twitter.png' %}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer">
+            <div class="foot-left">
+                <img src="{% static 'images/Lajfort-logo.png' %}" class="foot-logo" alt="">
+                <ul class="foot-ul">
+                    <li class="foot-li"><a href="/" class="foot-link">Home</a></li>
+                    <li class="foot-li"><a href="about" class="foot-link">About</a></li>
+                    <Li class="foot-li"><a href="gallery" class="foot-link">Gallery</a></Li>
+                    <li class="foot-li"><a href="contact" class="foot-link">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="foot-right">
+                <div class="foot-quick">
+                    <a class="foot-link">Quick Links</a>
+                    <h5>Contact Us</h5>
+                    <h5>About Us</h5>
+                </div>
+                <div class="foot-quick">
+                    <a class="foot-link">Others</a>
+                    <h5>User FAQs</h5>
+                    <h5>Contact Us</h5>
+                    <h5>Legal</h5>
+                    <h5>Privacy Policy</h5>
+                    <h5>Terms and Conditions</h5>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="copyright">
+            <h4>Copyright &copy; 2024.All rights reservered.</h4>
+            <div>
+                <img src="{% static 'images/Lajfort-foot-youtube.png' %}" class="social" alt="">
+                <img src="{% static 'images/Lajfort-foot-instagram.png' %}" class="social" alt="">
+                <img src="{% static 'images/Lajfort-foot-facebook.png' %}" class="social" alt="">
+                <img src="{% static 'images/Lajfort-foot-twitter.png' %}" class="social" alt="">
+            </div>
+        </div>
+    </footer>
+    <script>
+        $(document).on('submit', '#post-form', function(e) {
+            e.preventDefault();
+
+            $.ajax({
+                type: 'POST',
+                url: 'message',
+                data: {
+                    name: $('#name').val(),
+                    email: $('#email').val(),
+                    message: $('#message').val(),
+                    csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val(),
+                },
+                success: function(data) {
+                    //alert(data)
+                },
+            });
+            document.getElementById('name').value = ''
+            document.getElementById('email').value = ''
+            document.getElementById('message').value = ''
+        });
+    </script>
+</body>
+
+</html>

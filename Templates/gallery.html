@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="stylesheet" href="{% static 'css/gallery.css' %}">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <img class="laj-logo" src="{% static 'images/Lajfort-logo.png' %}" alt="">
+            <ul>
+                <li><a href="/" class="home-link">Home</a></li>
+                <li><a href="about">About</a></li>
+                <Li><a href="gallery">Gallery</a></Li>
+                <li><a href="contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <div>
+            <h1>Gallery</h1>
+        </div>
+        <p>Take a look at our school building in and out</p>
+        <div class="gallery-img">
+            {% for g in gallery %}
+            <img src="{{g.image.url}}" class="gallery-pics" alt=""> {% endfor %}
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="foot-left">
+                <img src="{% static 'images/Lajfort-logo.png' %}" class="foot-logo" alt="">
+                <ul class="foot-ul">
+                    <li class="foot-li"><a href="/" class="foot-link">Home</a></li>
+                    <li class="foot-li"><a href="about" class="foot-link">About</a></li>
+                    <Li class="foot-li"><a href="gallery" class="foot-link">Gallery</a></Li>
+                    <li class="foot-li"><a href="contact" class="foot-link">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="foot-right">
+                <div class="foot-quick">
+                    <a class="foot-link">Quick Links</a>
+                    <h5>Contact Us</h5>
+                    <h5>About Us</h5>
+                </div>
+                <div class="foot-quick">
+                    <a class="foot-link">Others</a>
+                    <h5>User FAQs</h5>
+                    <h5>Contact Us</h5>
+                    <h5>Legal</h5>
+                    <h5>Privacy Policy</h5>
+                    <h5>Terms and Conditions</h5>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="copyright">
+            <h4>Copyright &copy; 2024.All rights reservered.</h4>
+            <div>
+                <img src="{% static 'images/Lajfort-foot-youtube.png' %}" class="social" alt="">
+                <img src="{% static 'images/Lajfort-foot-instagram.png' %}" class="social" alt="">
+                <img src="{% static 'images/Lajfort-foot-facebook.png' %}" class="social" alt="">
+                <img src="{% static 'images/Lajfort-foot-twitter.png' %}" class="social" alt="">
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

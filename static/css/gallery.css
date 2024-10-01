@@ -1,0 +1,27 @@
+.main {
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-bottom: 100px;
+}
+
+.gallery-img {
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    row-gap: 50px;
+    column-gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-pics {
+    height: 300px;
+    width: 300px;
+}
+
+p {
+    margin-left: 30px;
+}
+
+h1 {
+    text-align: center;
+}

@@ -1,0 +1,109 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <img class="laj-logo" src="{% static 'images/Lajfort-logo.png' %}" alt="">
+            <ul>
+                <li><a href="/" class="home-link">Home</a></li>
+                <li><a href="about">About</a></li>
+                <Li><a href="gallery">Gallery</a></Li>
+                <li><a href="contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <img src="{% static 'images/Lajfort-about-img.png' %}" class="about-img" alt=""><br>
+    <h1 class="us">About Us</h1>
+    <main class="main">
+        {% for a in about %}
+        <div>
+            <p>{{a.about}}</p>
+        </div>
+        {% endfor %}
+        <section>
+            {% for a in about %}
+            <div class="vision">
+                <div>
+                    <img src="{{a.image.url}}" class="vision-img" alt="">
+                </div>
+                <div class="vis-stat">
+                    <p>Vision Statement</p>
+                </div>
+                <div class="vision-text">
+                    <p>{{a.vision}}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </section>
+        <section class="vis-sec">
+            <div class="mis-stat">
+                <p>Mission Statement</p>
+            </div>
+            {% for a in about %}
+            <div class="vision">
+                <div class="mission">
+                    <ul class="about-text">
+                        <li><span class="dot">&bullet;</span>{{a.mission1}}</li>
+                        <li><span class="dot">&bullet;</span>{{a.mission2}}</li>
+                        <li><span class="dot">&bullet;</span>{{a.mission3}}</li>
+                        <li><span class="dot">&bullet;</span>{{a.mission4}}</li>
+                    </ul>
+                </div>
+                <div>
+                    <img src="{{a.image.url}}" class="mission-img" alt="">
+                </div>
+            </div>
+            {% endfor %}
+        </section>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="foot-left">
+                <img src="{% static 'images/Lajfort-logo.png' %}" class="foot-logo" alt="">
+                <ul class="foot-ul">
+                    <li class="foot-li"><a href="/" class="foot-link">Home</a></li>
+                    <li class="foot-li"><a href="about" class="foot-link">About</a></li>
+                    <li class="foot-li"><a href="gallery" class="foot-link">Gallery</a></li>
+                    <li class="foot-li"><a href="contact" class="foot-link">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="foot-right">
+                <div class="foot-quick">
+                    <a class="foot-link">Quick Links</a>
+                    <h5>Contact Us</h5>
+                    <h5>About Us</h5>
+                </div>
+                <div class="foot-quick">
+                    <a class="foot-link">Others</a>
+                    <h5>User FAQs</h5>
+                    <h5>Contact Us</h5>
+                    <h5>Legal</h5>
+                    <h5>Privacy Policy</h5>
+                    <h5>Terms and Conditions</h5>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="copyright">
+            <h4>Copyright &copy; 2024.All rights reservered.</h4>
+            <div>
+                <img src="{% static 'images/Lajfort-foot-youtube.png' %}" class="social" alt="">
+                <img src="{% static 'images/Lajfort-foot-instagram.png' %}" class="social" alt="">
+                <img src="{% static 'images/Lajfort-foot-facebook.png' %}" class="social" alt="">
+                <img src="{% static 'images/Lajfort-foot-twitter.png' %}" class="social" alt="">
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
