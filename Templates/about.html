@@ -30,14 +30,14 @@
             <p>{{a.about}}</p>
         </div>
         {% endfor %}
-        <section>
+        <section class="mission-part">
+            <div class="vis-stat">
+                <p>Vision Statement</p>
+            </div>
             {% for a in about %}
             <div class="vision">
                 <div>
                     <img src="{{a.image.url}}" class="vision-img" alt="">
-                </div>
-                <div class="vis-stat">
-                    <p>Vision Statement</p>
                 </div>
                 <div class="vision-text">
                     <p>{{a.vision}}</p>
@@ -50,7 +50,7 @@
                 <p>Mission Statement</p>
             </div>
             {% for a in about %}
-            <div class="vision">
+            <div class="vision-part">
                 <div class="mission">
                     <ul class="about-text">
                         <li><span class="dot">&bullet;</span>{{a.mission1}}</li>

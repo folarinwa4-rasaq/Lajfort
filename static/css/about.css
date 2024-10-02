@@ -32,15 +32,24 @@ p {
     color: white;
 }
 
-.mission {
+.vision-part {
     display: flex;
-    background-color: rgba(41, 22, 110, 1);
-    color: white;
-    padding-bottom: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.mission {
+    margin-left: -50px;
+}
+
+.mission-part {
+    position: relative;
 }
 
 .vis-stat {
-    display: block;
+    position: absolute;
+    right: 300px;
+    top: 20px;
 }
 
 .to-vis {
@@ -65,6 +74,7 @@ p {
     background-color: rgba(41, 22, 110, 1);
     color: white;
     margin-bottom: 100px;
+    padding-bottom: 50px;
 }
 
 .about-text {
@@ -80,4 +90,14 @@ p {
 .mission-img {
     height: 250px;
     width: 350px;
+    margin-right: 20px;
+}
+
+.mis-stat {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    margin-left: 200px;
+    margin-top: 10px;
+    margin-bottom: 0px;
 }
