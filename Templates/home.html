@@ -48,34 +48,55 @@
         {% endfor %}
     </section>
     <section class="staff">
-        {% for p in principal %}
-        <div class="principal">
-            <img src="{{p.image.url}}" class="personnel-pics" alt="">
-            <div>
-                <p class="pp">Principal</p>
-                <p class="pp">Lajfort School</p>
-                <p class="speech">{{p.speech}}</p>
+        <div>
+            <img src="{% static 'images/principal-top-star1.png' %}" class="top-princ-img1" alt="">
+            <img src="{% static 'images/principal-top-star2.png' %}" class="top-princ-img2" alt=""> {% for p in principal %}
+            <div class="principal">
+                <img src="{{p.image.url}}" class="personnel-pics" alt="">
+                <div>
+                    <p class="pp">{{p.name}}</p>
+                    <small class="pp">Principal</small>
+                    <p class="speech">{{p.speech}}</p>
+                </div>
             </div>
+            {% endfor %}
+            <img src="{% static 'images/principal-bot-star.png' %}" class="bot-princ-img" alt="">
         </div>
-        {% endfor %} {% for f in founder %}
-        <div class="founder">
-            <img src="{{f.image.url}}" class="personnel-pics" alt="">
-            <div>
-                <p class="pp">Founder</p>
-                <p class="pp">Lajfort School</p>
-                <p>{{f.speech}}</p>
+        <div>
+            {% for f in founder %}
+            <div class="founder">
+                <img src="{{f.image.url}}" class="personnel-pics" alt="">
+                <div>
+                    <p class="pp">{{f.name}}</p>
+                    <small class="pp">Founder</small>
+                    <p>{{f.speech}}</p>
+                </div>
             </div>
-        </div>
-        {% endfor %} {% for vp in vicePrincipal %}
-        <div class="vice-principal">
-            <img src="{{vp.image.url}}" class="personnel-pics" alt="">
-            <div>
-                <p class="pp">Vice-Principal</p>
-                <p class="pp">Lajfort School</p>
-                <p>{{vp.speech}}</p>
+            {% endfor %} {% for ht in headTeacher %}
+            <div class="head-teacher">
+                <img src="{{ht.image.url}}" class="personnel-pics" alt="">
+                <div>
+                    <p class="pp">{{ht.name}}</p>
+                    <small class="pp">Head Teacher</small>
+                    <p class="speech">{{ht.speech}}</p>
+                </div>
             </div>
+            {% endfor %}
         </div>
-        {% endfor %}
+        <div class="right-part">
+            <img src="{% static 'images/vp-top-star.png' %}" class="top-vp-img" alt=""> {% for vp in vicePrincipal %}
+            <div class="vice-principal">
+                <img src="{{vp.image.url}}" class="personnel-pics" alt="">
+                <div>
+                    <p class="pp">{{vp.name}}</p>
+                    <small class="">Vice-Principal</small>
+                    <p>{{vp.speech}}</p>
+                </div>
+            </div>
+            {% endfor %}
+            <img src="{% static 'images/vp-bot-star1.png' %}" class="bot-vp-img1" alt="">
+            <img src="{% static 'images/vp-bot-star2.png' %}" class="bot-vp-img2" alt="">
+        </div>
     </section>
     <section class="home-gallery">
         <h2>Gallery</h2>

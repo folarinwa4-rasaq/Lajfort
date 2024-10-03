@@ -21,13 +21,21 @@ class Message(models.Model):
     message = models.TextField(max_length=1000000)
 
 class Principal(models.Model):
-    image = models.ImageField()
-    speech = models.TextField(max_length=150)
+    name = models.CharField(max_length=100)
+    image = models.ImageField(default="Lajfort-default-profile.png")
+    speech = models.TextField(max_length=300)
 
 class Founder(models.Model):
-    image = models.ImageField()
-    speech = models.TextField(max_length=150)
+    name = models.CharField(max_length=100)
+    image = models.ImageField(default="Lajfort-profile-pics.png")
+    speech = models.TextField(max_length=300)
 
 class VicePrincipal(models.Model):
-    image = models.ImageField()
-    speech = models.TextField(max_length=150)
+    name = models.CharField(max_length=100)
+    image = models.ImageField(default="Lajfort-default-profile.png")
+    speech = models.TextField(max_length=300)
+
+class HeadTeacher(models.Model):
+    name = models.CharField(max_length=100)
+    image = models.ImageField(default="Lajfort-default-profile.png")
+    speech = models.TextField(max_length=300)

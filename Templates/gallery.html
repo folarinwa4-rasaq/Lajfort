@@ -26,10 +26,12 @@
         <div>
             <h1>Gallery</h1>
         </div>
-        <p>Take a look at our school building in and out</p>
-        <div class="gallery-img">
-            {% for g in gallery %}
-            <img src="{{g.image.url}}" class="gallery-pics" alt=""> {% endfor %}
+        <h4>Take a look at our school building in and out</h4>
+        <div class="gallery">
+            <div class="gallery-img">
+                {% for g in gallery %}
+                <img src="{{g.image.url}}" class="gallery-pics" alt=""> {% endfor %}
+            </div>
         </div>
     </main>
     <footer>

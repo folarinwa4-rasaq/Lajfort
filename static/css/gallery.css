@@ -7,10 +7,14 @@
 .gallery-img {
     display: grid;
     grid-template-columns: 350px 350px 350px;
-    row-gap: 50px;
-    column-gap: 50px;
+    row-gap: 30px;
+    column-gap: 30px;
     justify-content: center;
     align-items: center;
+    padding: 20px;
+    width: 1110px;
+    margin-left: -50px;
+    background: linear-gradient(180deg, #FFFDC7 37.4%, #29166E 104.1%);
 }
 
 .gallery-pics {
@@ -18,8 +22,8 @@
     width: 350px;
 }
 
-p {
-    margin-left: 30px;
+h4 {
+    margin-left: -45px;
 }
 
 h1 {

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import About,Gallerie,Message,VicePrincipal,Principal,Founder
+from .models import About,Gallerie,Message,VicePrincipal,Principal,Founder,HeadTeacher
 from django.http  import HttpResponse
 
 # Create your views here.
@@ -10,7 +10,8 @@ def home(request):
     principal = Principal.objects.all()
     vicePrincipal = VicePrincipal.objects.all()
     founder = Founder.objects.all()
-    return render(request,'home.html',{'about':about,'gallery':gallery,'principal':principal,'vicePrincipal':vicePrincipal,'founder':founder})
+    headTeacher = HeadTeacher.objects.all()
+    return render(request,'home.html',{'about':about,'gallery':gallery,'principal':principal,'vicePrincipal':vicePrincipal,'founder':founder,'headTeacher':headTeacher})
 
 def about(request):
     about = About.objects.all()
