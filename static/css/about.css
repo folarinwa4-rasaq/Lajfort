@@ -15,7 +15,6 @@
 .main {
     margin-top: -5px;
     padding: 50px 50px 0px 50px;
-    /*margin-bottom: 100px;*/
     background-color: rgba(41, 22, 110, 1);
     color: white;
 }
@@ -40,6 +39,7 @@ p {
 
 .mission {
     margin-left: -50px;
+    margin-top: -25px;
 }
 
 .mission-part {
@@ -74,7 +74,7 @@ p {
     background-color: rgba(41, 22, 110, 1);
     color: white;
     margin-bottom: 100px;
-    padding-bottom: 50px;
+    padding-bottom: 10px;
 }
 
 .about-text {
@@ -88,7 +88,7 @@ p {
 }
 
 .mission-img {
-    height: 250px;
+    height: 450px;
     width: 350px;
     margin-right: 20px;
 }
@@ -100,4 +100,12 @@ p {
     margin-left: 200px;
     margin-top: 10px;
     margin-bottom: 0px;
+}
+
+.mis-img {
+    margin-top: -250px;
+}
+
+.main-about {
+    margin-top: -50px;
 }

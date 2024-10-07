@@ -26,7 +26,7 @@
     <h1 class="us">About Us</h1>
     <main class="main">
         {% for a in about %}
-        <div>
+        <div class="main-about">
             <p>{{a.about}}</p>
         </div>
         {% endfor %}
@@ -53,13 +53,14 @@
             <div class="vision-part">
                 <div class="mission">
                     <ul class="about-text">
+                        <h4>To achieve our vision,we will:</h4>
                         <li><span class="dot">&bullet;</span>{{a.mission1}}</li>
                         <li><span class="dot">&bullet;</span>{{a.mission2}}</li>
                         <li><span class="dot">&bullet;</span>{{a.mission3}}</li>
                         <li><span class="dot">&bullet;</span>{{a.mission4}}</li>
                     </ul>
                 </div>
-                <div>
+                <div class="mis-img">
                     <img src="{{a.image2.url}}" class="mission-img" alt="">
                 </div>
             </div>
