@@ -49,8 +49,7 @@
     </section>
     <section class="staff">
         <div>
-            <img src="{% static 'images/principal-top-star1.png' %}" class="top-princ-img1" alt="">
-            <img src="{% static 'images/principal-top-star2.png' %}" class="top-princ-img2" alt=""> {% for p in principal %}
+            {% for p in principal %}
             <div class="principal">
                 <img src="{{p.image.url}}" class="personnel-pics" alt="">
                 <div>
@@ -60,7 +59,6 @@
                 </div>
             </div>
             {% endfor %}
-            <img src="{% static 'images/principal-bot-star.png' %}" class="bot-princ-img" alt="">
         </div>
         <div>
             {% for f in founder %}
@@ -84,7 +82,7 @@
             {% endfor %}
         </div>
         <div class="right-part">
-            <img src="{% static 'images/vp-top-star.png' %}" class="top-vp-img" alt=""> {% for vp in vicePrincipal %}
+            {% for vp in vicePrincipal %}
             <div class="vice-principal">
                 <img src="{{vp.image.url}}" class="personnel-pics" alt="">
                 <div>
@@ -94,8 +92,6 @@
                 </div>
             </div>
             {% endfor %}
-            <img src="{% static 'images/vp-bot-star1.png' %}" class="bot-vp-img1" alt="">
-            <img src="{% static 'images/vp-bot-star2.png' %}" class="bot-vp-img2" alt="">
         </div>
     </section>
     <section class="home-gallery">
@@ -120,15 +116,15 @@
                         <input type="submit" class="send" value="Send">
                     </form>
                 </div>
-                <div>
-                    <h5><span><img src="{% static 'images/Lajfort-contact-location.png' %}" alt=""></span>Ota<br>Ogun</h5>
-                    <h5><span><img src="{% static 'images/Lajfort-contact-phone.png' %}" alt=""></span>08052091275<br>07089668217</h5>
-                    <h5><span><img src="{% static 'images/Lajfort-contact-email.png' %}" alt=""></span>lajfortschools@gmail.com</h5>
+                <div class="con">
+                    <h5 class="con-text"><span><img src="{% static 'images/Lajfort-contact-location.png' %}" class="con-img" alt=""></span>Ota<br>Ogun state</h5>
+                    <h5 class="con-text"><span><img src="{% static 'images/Lajfort-contact-phone.png' %}" class="con-img" alt=""></span>08033587846<br>08155238162</h5>
+                    <h5 class="con-text"><span><img src="{% static 'images/Lajfort-contact-email.png' %}" class="con-img" alt=""></span>lajfortschools@gmail.com</h5>
                     <div class="contact-social">
-                        <img src="{% static 'images/Lajfort-contact-youtube.png' %}" alt="">
-                        <img src="{% static 'images/Lajfort-contact-instagram.png' %}" alt="">
-                        <img src="{% static 'images/Lajfort-contact-facebook.png' %}" alt="">
-                        <img src="{% static 'images/Lajfort-contact-twitter.png' %}" alt="">
+                        <img src="{% static 'images/Lajfort-contact-youtube.png' %}" class="con-social" alt="">
+                        <img src="{% static 'images/Lajfort-contact-instagram.png' %}" class="con-social" alt="">
+                        <img src="{% static 'images/Lajfort-contact-facebook.png' %}" class="con-social" alt="">
+                        <img src="{% static 'images/Lajfort-contact-twitter.png' %}" class="con-social" alt="">
                     </div>
                 </div>
             </div>

@@ -180,29 +180,12 @@ a {
     border-bottom-left-radius: 50px;
     border-top-right-radius: 50px;
     border-bottom-right-radius: 150px;
-    width: 350px;
-    height: 300px;
+    width: 400px;
+    height: 310px;
     box-shadow: 0px 20px 20px 10px rgba(41, 22, 110, 0.76);
     backdrop-filter: blur(5px);
     text-align: center;
-}
-
-.top-vp-img {
-    text-align: center;
-    margin-bottom: 70px;
-    margin-left: 80px;
-}
-
-.bot-vp-img1 {
-    position: relative;
-    margin-top: 50px;
-    margin-left: 80px;
-}
-
-.bot-vp-img2 {
-    position: absolute;
-    bottom: -1410px;
-    right: 265px;
+    margin-top: -70px;
 }
 
 .founder {
@@ -210,48 +193,44 @@ a {
     border-bottom-left-radius: 100px;
     border-top-right-radius: 100px;
     border-bottom-right-radius: 50px;
-    width: 350px;
+    width: 370px;
     height: 300px;
     box-shadow: 0px 20px 20px 10px rgba(41, 22, 110, 0.76);
     backdrop-filter: blur(5px);
     text-align: center;
-    margin-bottom: 150px;
+    margin-bottom: 180px;
     margin-top: -50px;
 }
 
-.principal,
+.principal {
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 150px;
+    border-top-right-radius: 150px;
+    border-bottom-right-radius: 50px;
+    width: 390px;
+    height: 330px;
+    box-shadow: 0px 20px 20px 10px rgba(41, 22, 110, 0.76);
+    backdrop-filter: blur(5px);
+    text-align: center;
+    margin-top: -85px;
+}
+
 .head-teacher {
     border-top-left-radius: 50px;
     border-bottom-left-radius: 150px;
     border-top-right-radius: 150px;
     border-bottom-right-radius: 50px;
-    width: 350px;
-    height: 300px;
+    width: 390px;
+    height: 330px;
     box-shadow: 0px 20px 20px 10px rgba(41, 22, 110, 0.76);
     backdrop-filter: blur(5px);
     text-align: center;
+    margin-left: 10px;
 }
 
 .head-teacher {
     margin-top: 20px;
     margin-bottom: 20px;
-}
-
-.bot-princ-img {
-    margin-left: 100px;
-    margin-top: 80px;
-}
-
-.top-princ-img1 {
-    position: relative;
-    margin-bottom: 60px;
-    margin-left: 100px;
-}
-
-.top-princ-img2 {
-    position: absolute;
-    bottom: -1425px;
-    left: 152px;
 }
 
 .pp {
@@ -372,6 +351,24 @@ small {
     background-color: rgba(41, 22, 110, 1);
     color: white;
     cursor: pointer;
+}
+
+.con-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.con-img {
+    margin-right: 10px;
+}
+
+.con {
+    margin-left: 120px;
+}
+
+.con-social {
+    margin-right: 10px;
 }
 
 .send:hover {
