@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect
-from .models import About,Gallerie,Message,VicePrincipal,Principal,Founder,HeadTeacher
+from .models import About,Gallerie,Message,VicePrincipal,Principal,Founder,HeadTeacher,Career
 from django.http  import HttpResponse
 
 # Create your views here.
@@ -33,3 +33,7 @@ def message(request):
         content = Message(name=name, email=email, message=message)
         content.save()
     return render(request, 'contact.html')
+
+def career(request):
+    career = Career.objects.all()
+    return render(request, 'career.html', {'career':career})

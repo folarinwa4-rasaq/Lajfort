@@ -380,6 +380,21 @@ small {
 }
 
 
+/*career*/
+
+.career {
+    padding: 75px;
+}
+
+.career h1 {
+    text-align: center;
+}
+
+.career h4 {
+    text-align: center;
+}
+
+
 /*footer*/
 
 footer {

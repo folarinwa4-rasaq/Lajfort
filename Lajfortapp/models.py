@@ -39,3 +39,6 @@ class HeadTeacher(models.Model):
     name = models.CharField(max_length=100)
     image = models.ImageField(default="Lajfort-default-profile.png")
     speech = models.TextField(max_length=300)
+
+class Career(models.Model):
+    content = models.TextField(max_length=1000000,null=True)

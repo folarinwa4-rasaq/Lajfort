@@ -5,9 +5,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
     <link rel="stylesheet" href="{% static 'css/home.css' %}">
-    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+    <title>Career</title>
 </head>
 
 <body>
@@ -23,51 +22,17 @@
             </ul>
         </nav>
     </header>
-    <img src="{% static 'images/Lajfort-about-img.png' %}" class="about-img" alt=""><br>
-    <h1 class="us">About Us</h1>
-    <main class="main">
-        {% for a in about %}
-        <div class="main-about">
-            <p>{{a.about}}</p>
-        </div>
+    {% if career %}
+    <section class="career">
+        {% for c in career %}
+        <h4>{{c.content}}</h4>
         {% endfor %}
-        <section class="mission-part">
-            <div class="vis-stat">
-                <p>Vision Statement</p>
-            </div>
-            {% for a in about %}
-            <div class="vision">
-                <div>
-                    <img src="{{a.image.url}}" class="vision-img" alt="">
-                </div>
-                <div class="vision-text">
-                    <p>{{a.vision}}</p>
-                </div>
-            </div>
-            {% endfor %}
-        </section>
-        <section class="vis-sec">
-            <div class="mis-stat">
-                <p>Mission Statement</p>
-            </div>
-            {% for a in about %}
-            <div class="vision-part">
-                <div class="mission">
-                    <ul class="about-text">
-                        <h4>To achieve our vision,we will:</h4>
-                        <li><span class="dot">&bullet;</span>{{a.mission1}}</li>
-                        <li><span class="dot">&bullet;</span>{{a.mission2}}</li>
-                        <li><span class="dot">&bullet;</span>{{a.mission3}}</li>
-                        <li><span class="dot">&bullet;</span>{{a.mission4}}</li>
-                    </ul>
-                </div>
-                <div class="mis-img">
-                    <img src="{{a.image2.url}}" class="mission-img" alt="">
-                </div>
-            </div>
-            {% endfor %}
-        </section>
-    </main>
+    </section>
+    {% else %}
+    <section class="career">
+        <h1>Content not Avaliable for Now.</h1>
+    </section>
+    {% endif %}
     <footer>
         <div class="footer">
             <div class="foot-left">

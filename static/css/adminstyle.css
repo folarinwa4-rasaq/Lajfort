@@ -61,3 +61,7 @@ div.breadcrumbs {
 div.breadcrumbs a {
     color: gray;
 }
+
+html[data-theme="auto"] .theme-toggle svg.theme-icon-when-auto {
+    display: none;
+}
