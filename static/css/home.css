@@ -3,6 +3,19 @@ body {
     font-family: Arial;
 }
 
+#background {
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/*header*/
+
 header {
     background-color: rgba(255, 253, 199, 1);
     width: 100%;
@@ -30,11 +43,6 @@ a {
     cursor: pointer;
 }
 
-.home-link:active {
-    color: rgba(0, 0, 0, 1);
-    font-size: 20px;
-}
-
 .laj-logo {
     height: 100px;
 }
@@ -44,35 +52,30 @@ a {
 
 .home-main {
     display: flex;
-    align-items: end;
-    margin-top: 50px;
+    align-items: start;
+    margin-top: 25px;
 }
 
 .Welcome {
-    margin-left: 150px;
-    margin-right: 350px;
+    padding-left: 50px;
 }
 
 .Welcome h3 {
-    font-size: 36px;
-    font-weight: 400;
+    font-size: 46px;
+    font-weight: 500;
     margin-bottom: 0;
 }
 
-.top-img img {
-    height: 450px;
-    margin-right: 75px;
-}
-
 .Welcome h1 {
-    font-weight: 400;
+    font-weight: 600;
     font-size: 64px;
     margin-top: 0;
 }
 
 .Welcome p {
-    font-size: 17.5px;
+    font-size: 20px;
     font-weight: 400;
+    margin-top: -25px;
 }
 
 .top-About {
@@ -117,7 +120,7 @@ a {
 
 .home-about {
     display: flex;
-    margin-top: 150px;
+    margin-top: 75px;
     padding: 50px;
     background-color: rgba(41, 22, 110, 1);
     color: white;
@@ -186,6 +189,7 @@ a {
     backdrop-filter: blur(5px);
     text-align: center;
     margin-top: -70px;
+    background-color: white;
 }
 
 .founder {
@@ -200,6 +204,7 @@ a {
     text-align: center;
     margin-bottom: 180px;
     margin-top: -50px;
+    background-color: white;
 }
 
 .principal {
@@ -213,6 +218,7 @@ a {
     backdrop-filter: blur(5px);
     text-align: center;
     margin-top: -85px;
+    background-color: white;
 }
 
 .head-teacher {
@@ -226,6 +232,7 @@ a {
     backdrop-filter: blur(5px);
     text-align: center;
     margin-left: 10px;
+    background-color: white;
 }
 
 .head-teacher {
@@ -312,6 +319,7 @@ small {
     border-radius: 20px;
     padding-left: 50px;
     padding-right: 150px;
+    background-color: white;
 }
 
 .message-name {
