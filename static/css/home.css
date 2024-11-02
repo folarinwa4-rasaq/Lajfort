@@ -465,3 +465,40 @@ footer {
     margin-top: 5px;
     height: 20px;
 }
+
+
+/* result */
+
+table,
+tr,
+th,
+td {
+    border: 2px solid;
+    border-collapse: collapse;
+    width: 800px;
+}
+
+table {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+td {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.user {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.prince {
+    display: block;
+}

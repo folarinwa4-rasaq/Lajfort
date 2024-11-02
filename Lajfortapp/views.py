@@ -1,6 +1,8 @@
 from django.shortcuts import render,redirect
-from .models import About,Gallerie,Message,VicePrincipal,Principal,Founder,HeadTeacher,Career
-from django.http  import HttpResponse
+from .models import About,Gallerie,Message,VicePrincipal,Principal,Founder,HeadTeacher,Career,Student,Result,Overall_score
+from django.contrib.auth.models import User,auth
+from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
@@ -37,3 +39,48 @@ def message(request):
 def career(request):
     career = Career.objects.all()
     return render(request, 'career.html', {'career':career})
+
+def signup(request):
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+        clas = request.POST['class']
+        password2 = request.POST['password2']
+
+        if password == password2:
+            if Student.objects.filter(name=username).exists():
+                user = User.objects.create_user(username=username, password=password)
+                #user.save();
+                return redirect('result')
+            else:
+                messages.warning(request, 'User does not exist')
+                return redirect('signup')
+        else:
+            messages.info(request, 'password not the same')
+            return redirect('signup')
+    else:
+        return render(request, 'signup.html')
+    
+def login(request):
+    if request.method == 'POST':
+        name = request.POST['name']
+        password = request.POST['password']
+    
+        user = auth.authenticate(username=name, password=password)
+
+        if user is not None:
+            auth.login(request, user)
+            return redirect('result')
+        else:
+            messages.info(request, 'Invalid Credentials')
+            return redirect('login')
+    else:
+        return render(request, 'login.html')
+    
+@login_required(login_url='login')
+def result(request):
+    user = request.user
+    student = Student.objects.get(name=user.username)
+    result = Result.objects.filter(student=student)
+    total = Overall_score.objects.filter(student=student)
+    return render(request, 'result.html',{'result':result,'student':student,'total':total})

@@ -5,8 +5,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
     <link rel="stylesheet" href="{% static 'css/home.css' %}">
-    <title>Career</title>
 </head>
 
 <body>
@@ -23,17 +23,36 @@
             </ul>
         </nav>
     </header>
-    {% if career %}
-    <section class="career">
-        {% for c in career %}
-        <h4>{{c.content}}</h4>
-        {% endfor %}
-    </section>
-    {% else %}
-    <section class="career">
-        <h1>Content not Avaliable for Now.</h1>
-    </section>
-    {% endif %}
+    <h1 class="user">Result for {{request.user}}</h1>
+    <main id="main">
+        <table>
+            <tr>
+                <th>Subjects</th>
+                <th>Test Score</th>
+                <th>Exam Score</th>
+            </tr>
+            {% for r in result %}
+            <tr>
+                <td>{{r.subject}}</td>
+                <td>{{r.test_score}}</td>
+                <td>{{r.exam_score}}</td>
+            </tr>
+            {% endfor %} {% for t in total %}
+            <tr>
+                <th>total score</td>
+                    <td>{{t.total_score}}</td>
+            </tr>
+            <tr>
+                <th>percentage</td>
+                    <td>70%</td>
+            </tr>
+            <tr>
+                <th>principals remark:</th>
+                <td>{{t.principal_remark}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </main>
     <footer>
         <div class="footer">
             <div class="foot-left">

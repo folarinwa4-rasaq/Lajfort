@@ -5,45 +5,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
     <link rel="stylesheet" href="{% static 'css/home.css' %}">
-    <title>Career</title>
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}">
 </head>
 
 <body>
     <header>
         <nav>
             <img class="laj-logo" src="{% static 'images/Lajfort-logo.png' %}" alt="">
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="about">About</a></li>
-                <li><a href="gallery">Gallery</a></li>
-                <li><a href="career">Career</a></li>
-                <li><a href="contact">Contact Us</a></li>
-                <li><a href="result">Result</a></li>
-            </ul>
         </nav>
     </header>
-    {% if career %}
-    <section class="career">
-        {% for c in career %}
-        <h4>{{c.content}}</h4>
-        {% endfor %}
-    </section>
-    {% else %}
-    <section class="career">
-        <h1>Content not Avaliable for Now.</h1>
-    </section>
-    {% endif %}
+    <main class="sign-main">
+        <form action="" method="post">
+            {% csrf_token %}
+            <h1>Login Now</h1>
+            <div class="register-form">
+                {% for m in messages %}
+                <h3 style="color: red; text-align: center;">{{m}}</h3>
+                {% endfor %}
+                <label for="name">Username</label><br>
+                <input type="text" name="username" placeholder="input Your Name" id="name"><br>
+                <label for="Class">Class</label><br>
+                <input type="text" name="class" placeholder="input Your Class e.g jss1,sss1" id="Class"><br>
+                <label for="Password">Password</label><br>
+                <input type="Password" name="password" placeholder="input Your Password" id="Password"><br>
+                <label for="Password2">RepeatPassword</label><br>
+                <input type="Password" name="password2" placeholder="input Your Password" id="Password2"><br>
+                <input type="submit" class="sign-btn" value="Signup">
+                <h5>Already have an account?<a href="login">Login now</a></h5>
+            </div>
+        </form>
+    </main>
     <footer>
         <div class="footer">
             <div class="foot-left">
                 <img src="{% static 'images/Lajfort-logo.png' %}" class="foot-logo" alt="">
-                <ul class="foot-ul">
-                    <li class="foot-li"><a href="/" class="foot-link">Home</a></li>
-                    <li class="foot-li"><a href="about" class="foot-link">About</a></li>
-                    <Li class="foot-li"><a href="gallery" class="foot-link">Gallery</a></Li>
-                    <li class="foot-li"><a href="contact" class="foot-link">Contact Us</a></li>
-                </ul>
             </div>
             <div class="foot-right">
                 <div class="foot-quick">
