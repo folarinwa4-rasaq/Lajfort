@@ -67,52 +67,15 @@ a {
 }
 
 .Welcome h1 {
-    font-weight: 600;
-    font-size: 64px;
+    font-weight: 700;
+    font-size: 84px;
     margin-top: 0;
 }
 
 .Welcome p {
-    font-size: 20px;
+    font-size: 30px;
     font-weight: 400;
     margin-top: -25px;
-}
-
-.top-About {
-    height: 45px;
-    width: 135px;
-    border: none;
-    border-radius: 5px;
-    background-color: rgba(41, 22, 110, 1);
-    color: white;
-    margin-right: 10px;
-    cursor: pointer;
-}
-
-.top-contact {
-    height: 45px;
-    width: 145px;
-    border-radius: 5px;
-    border-width: 1px;
-    border-style: solid;
-    background-color: white;
-    cursor: pointer;
-}
-
-.top-About:hover {
-    opacity: 0.8;
-}
-
-.top-contact:hover {
-    opacity: 0.8;
-}
-
-.top-About:active {
-    opacity: 0.6;
-}
-
-.top-contact:active {
-    opacity: 0.6;
 }
 
 
@@ -121,14 +84,15 @@ a {
 .home-about {
     display: flex;
     margin-top: 75px;
-    padding: 50px;
+    padding: 25px;
     background-color: rgba(41, 22, 110, 1);
     color: white;
     justify-content: space-between;
 }
 
 .home-about-img {
-    height: 350px;
+    height: 450px;
+    width: 600px;
 }
 
 .home-about-text {
@@ -258,25 +222,25 @@ small {
 .home-gallery {
     background-color: rgba(255, 253, 199, 1);
     text-align: center;
-    padding-top: 100px;
-    padding-bottom: 75px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .home-gallery-img {
     display: grid;
-    grid-template-columns: 300px 300px 300px;
-    row-gap: 40px;
-    column-gap: 50px;
+    grid-template-columns: 380px 380px 380px;
+    row-gap: 25px;
+    column-gap: 25px;
     justify-content: center;
 }
 
 .home-gallery-pics {
-    height: 300px;
-    width: 300px;
+    height: 370px;
+    width: 380px;
 }
 
 .more-gallery {
-    margin-top: 70px;
+    margin-top: 30px;
     color: white;
     background-color: rgba(41, 22, 110, 1);
     width: 120px;
@@ -284,6 +248,7 @@ small {
     border: none;
     border-radius: 15px;
     cursor: pointer;
+    text-transform: uppercase;
 }
 
 .more-gallery:hover {
@@ -391,7 +356,7 @@ small {
 /*career*/
 
 .career {
-    padding: 75px;
+    padding: 50px;
 }
 
 .career h1 {
@@ -479,14 +444,14 @@ td {
 }
 
 table {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 15px;
 }
 
 #main {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 230px 0 230px;
 }
 
 td {
@@ -501,4 +466,14 @@ td {
 
 .prince {
     display: block;
+}
+
+#principal-sec {
+    width: 800px;
+    text-align: start;
+    margin-left: 230px;
+}
+
+#principal-sec h4 {
+    text-transform: capitalize;
 }

@@ -1,31 +1,35 @@
 .main {
     padding-left: 100px;
-    padding-right: 100px;
-    margin-bottom: 100px;
+    padding-right: 25px;
+    margin-bottom: 50px;
 }
 
 .gallery-img {
     display: grid;
-    grid-template-columns: 350px 350px 350px;
+    grid-template-columns: 360px 360px 360px;
     row-gap: 30px;
     column-gap: 30px;
-    justify-content: center;
-    align-items: center;
+    place-items: center;
     padding: 20px;
-    width: 1110px;
-    margin-left: -50px;
+    width: 1150px;
+    margin-left: -65px;
     background: linear-gradient(180deg, #FFFDC7 37.4%, #29166E 104.1%);
 }
 
 .gallery-pics {
     height: 350px;
-    width: 350px;
+    width: 360px;
 }
 
 h4 {
     margin-left: -45px;
+    color: rgba(41, 22, 110, 1);
 }
 
 h1 {
     text-align: center;
+}
+
+#gal {
+    text-transform: capitalize;
 }

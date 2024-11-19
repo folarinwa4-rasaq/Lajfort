@@ -87,14 +87,24 @@ class Student(models.Model):
     name = models.CharField(max_length=500)
     clas = models.CharField(max_length=50,choices=CLASS_CHIOCE)
 
+    def __str__(self):
+        return self.name + ' in ' + self.clas + ' class'
+
 class Result(models.Model):
     student = models.ForeignKey(Student, on_delete=models.CASCADE)
     subject = models.CharField(max_length=50, choices=SUBJEECT_CHOICES)
     test_score = models.IntegerField()
     exam_score = models.IntegerField()
+    grade = models.CharField(default='A1',max_length=50)
+
+    def __str__(self):
+        return self.student.name + ' ' + self.subject
 
 class Overall_score(models.Model):
     total_score = models.IntegerField()
     percentage = models.CharField(max_length=50)
     principal_remark = models.TextField(max_length=1000)
     student = models.ForeignKey(Student,on_delete=models.CASCADE)
+    
+    def __str__(self):
+        return self.student.name + ' ' + self.percentage
