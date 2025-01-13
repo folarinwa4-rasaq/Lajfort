@@ -28,7 +28,7 @@ SECRET_KEY = config('SECRET_KEY'),
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['lajfort.onrender.com', 'lajfortschools.com']
+ALLOWED_HOSTS = ['lajfort.onrender.com','www.lajfortschools.com', 'lajfortschools.com']
 
 
 # Application definition
