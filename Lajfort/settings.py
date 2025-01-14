@@ -28,7 +28,7 @@ SECRET_KEY = config('SECRET_KEY'),
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['lajfort.onrender.com','www.lajfortschools.com', 'lajfortschools.com']
+ALLOWED_HOSTS = ['localhost','lajfort.onrender.com','www.lajfortschools.com', 'lajfortschools.com']
 
 
 # Application definition
@@ -86,6 +86,12 @@ DATABASES = {
         ssl_require=True   # Enforce SSL for Render-hosted databases
     )
 }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 #r'C:\Users\USER\OneDrive\Desktop\DataBases\lajfortdb'
 # BASE_DIR / 'db.sqlite3'
 # Password validation
