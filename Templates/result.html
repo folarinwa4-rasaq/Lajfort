@@ -1,4 +1,4 @@
-{% load static %}
+{% load static %} {% load static tailwind_tags %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +13,7 @@
     <header>
         <nav>
             <img class="laj-logo" src="{% static 'images/Lajfort-logo.png' %}" alt="">
-            <ul>
+            <ul class="mr-{50px}">
                 <li><a href="/">Home</a></li>
                 <li><a href="about">About</a></li>
                 <li><a href="gallery">Gallery</a></li>
@@ -24,6 +24,7 @@
         </nav>
     </header>
     <h1 class="user">Result for {{request.user}}</h1>
+    {% if result %}
     <main id="main">
         <table>
             <tr>
@@ -50,8 +51,11 @@
     </main>
     <section id="principal-sec">
         <h4>principals remark:<span> {{t.principal_remark}}</span></h4>
+        {% endfor %}
     </section>
-    {% endfor %}
+    {% else %}
+    <h2>Your Result Is Not Ready For Now</h2>
+    {% endif %}
     <footer>
         <div class="footer">
             <div class="foot-left">

@@ -35,3 +35,9 @@ input {
     background-color: rgba(41, 22, 110, 1);
     color: white;
 }
+
+@media (max-width:600px) {
+    .register-form {
+        width: 300px;
+    }
+}

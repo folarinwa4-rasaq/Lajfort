@@ -1,4 +1,4 @@
-{% load static %}
+{% load static %} {% load static tailwind_tags %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +12,7 @@
 
 <body>
     <video autoplay muted loop id="background"><source src="{% static 'videos/Lajfort-Background-Video.mp4' %}" type="video/mp4"></video>
-    <header>
+    <header class="mr-{500px}">
         <nav>
             <img class="laj-logo" src="{% static 'images/Lajfort-logo.png' %}" alt="">
             <ul>
@@ -33,13 +33,13 @@
     </main>
     <section class="home-about">
         {% for a in about %}
-        <div>
+        <div class="home-img-div">
             <img src="{{a.image.url}}" alt="" class="home-about-img">
         </div>
         <div class="home-about-text">
             <h2>About Us</h2>
             <div>
-                <p>{{a.about|truncatewords:250}}</p>
+                <p class="h-a-text">{{a.about|truncatewords:250}}</p>
                 <a href="about"><input type="submit" value="Read More" class="read-more-button"></a>
             </div>
         </div>

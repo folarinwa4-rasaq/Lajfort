@@ -1,4 +1,4 @@
-{% load static %}
+{% load static %} {% load static tailwind_tags %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,105 +8,104 @@
     <title>About</title>
     <link rel="stylesheet" href="{% static 'css/home.css' %}">
     <link rel="stylesheet" href="{% static 'css/about.css' %}">
-</head>
 
-<body>
-    <header>
-        <nav>
-            <img class="laj-logo" src="{% static 'images/Lajfort-logo.png' %}" alt="">
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="about">About</a></li>
-                <li><a href="gallery">Gallery</a></li>
-                <li><a href="career">Career</a></li>
-                <li><a href="contact">Contact Us</a></li>
-                <li><a href="result">Result</a></li>
-            </ul>
-        </nav>
-    </header>
-    <img src="{% static 'images/Lajfort-about-img.png' %}" class="about-img" alt=""><br>
-    <h1 class="us">About Us</h1>
-    <main class="main">
-        {% for a in about %}
-        <div class="main-about">
-            <p>{{a.about}}</p>
-        </div>
-        {% endfor %}
-        <section class="mission-part">
-            <div class="vis-stat">
-                <p>Vision Statement</p>
-            </div>
+    <body>
+        <header>
+            <nav>
+                <img class="laj-logo" src="{% static 'images/Lajfort-logo.png' %}" alt="">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="about">About</a></li>
+                    <li><a href="gallery">Gallery</a></li>
+                    <li><a href="career">Career</a></li>
+                    <li><a href="contact">Contact Us</a></li>
+                    <li><a href="result">Result</a></li>
+                </ul>
+            </nav>
+        </header>
+        <img src="{% static 'images/Lajfort-about-img.png' %}" class="about-img" alt=""><br>
+        <h1 class="us">About Us</h1>
+        <main class="main">
             {% for a in about %}
-            <div class="vision">
-                <div>
-                    <img src="{{a.image.url}}" class="vision-img" alt="">
-                </div>
-                <div class="vision-text">
-                    <p>{{a.vision}}</p>
-                </div>
+            <div class="main-about">
+                <p>{{a.about}}</p>
             </div>
             {% endfor %}
-        </section>
-        <section class="vis-sec">
-            <div class="mis-stat">
-                <p>Mission Statement</p>
-            </div>
-            {% for a in about %}
-            <div class="vision-part">
-                <div class="mission">
-                    <ul class="about-text">
-                        <h4>To achieve our vision,we will:</h4>
-                        <li><span class="dot">&bullet;</span>{{a.mission1}}</li>
-                        <li><span class="dot">&bullet;</span>{{a.mission2}}</li>
-                        <li><span class="dot">&bullet;</span>{{a.mission3}}</li>
-                        <li><span class="dot">&bullet;</span>{{a.mission4}}</li>
+            <section class="mission-part">
+                <div class="vis-stat">
+                    <p>Vision Statement</p>
+                </div>
+                {% for a in about %}
+                <div class="vision">
+                    <div>
+                        <img src="{{a.image.url}}" class="vision-img" alt="">
+                    </div>
+                    <div class="vision-text">
+                        <p>{{a.vision}}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </section>
+            <section class="vis-sec">
+                <div class="mis-stat">
+                    <p>Mission Statement</p>
+                </div>
+                {% for a in about %}
+                <div class="vision-part">
+                    <div class="mission">
+                        <ul class="about-text">
+                            <h4>To achieve our vision,we will:</h4>
+                            <li class="vis-text"><span class="dot">&bullet;</span>{{a.mission1}}</li>
+                            <li class="vis-text"><span class="dot">&bullet;</span>{{a.mission2}}</li>
+                            <li class="vis-text"><span class="dot">&bullet;</span>{{a.mission3}}</li>
+                            <li class="vis-text"><span class="dot">&bullet;</span>{{a.mission4}}</li>
+                        </ul>
+                    </div>
+                    <div class="mis-img">
+                        <img src="{{a.image2.url}}" class="mission-img" alt="">
+                    </div>
+                </div>
+                {% endfor %}
+            </section>
+        </main>
+        <footer>
+            <div class="footer">
+                <div class="foot-left">
+                    <img src="{% static 'images/Lajfort-logo.png' %}" class="foot-logo" alt="">
+                    <ul class="foot-ul">
+                        <li class="foot-li"><a href="/" class="foot-link">Home</a></li>
+                        <li class="foot-li"><a href="about" class="foot-link">About</a></li>
+                        <Li class="foot-li"><a href="gallery" class="foot-link">Gallery</a></Li>
+                        <li class="foot-li"><a href="contact" class="foot-link">Contact Us</a></li>
                     </ul>
                 </div>
-                <div class="mis-img">
-                    <img src="{{a.image2.url}}" class="mission-img" alt="">
+                <div class="foot-right">
+                    <div class="foot-quick">
+                        <a class="foot-link">Quick Links</a>
+                        <h5>Contact Us</h5>
+                        <h5>About Us</h5>
+                    </div>
+                    <div class="foot-quick">
+                        <a class="foot-link">Others</a>
+                        <h5>User FAQs</h5>
+                        <h5>Contact Us</h5>
+                        <h5>Legal</h5>
+                        <h5>Privacy Policy</h5>
+                        <h5>Terms and Conditions</h5>
+                    </div>
                 </div>
             </div>
-            {% endfor %}
-        </section>
-    </main>
-    <footer>
-        <div class="footer">
-            <div class="foot-left">
-                <img src="{% static 'images/Lajfort-logo.png' %}" class="foot-logo" alt="">
-                <ul class="foot-ul">
-                    <li class="foot-li"><a href="/" class="foot-link">Home</a></li>
-                    <li class="foot-li"><a href="about" class="foot-link">About</a></li>
-                    <Li class="foot-li"><a href="gallery" class="foot-link">Gallery</a></Li>
-                    <li class="foot-li"><a href="contact" class="foot-link">Contact Us</a></li>
-                </ul>
-            </div>
-            <div class="foot-right">
-                <div class="foot-quick">
-                    <a class="foot-link">Quick Links</a>
-                    <h5>Contact Us</h5>
-                    <h5>About Us</h5>
-                </div>
-                <div class="foot-quick">
-                    <a class="foot-link">Others</a>
-                    <h5>User FAQs</h5>
-                    <h5>Contact Us</h5>
-                    <h5>Legal</h5>
-                    <h5>Privacy Policy</h5>
-                    <h5>Terms and Conditions</h5>
+            <hr>
+            <div class="copyright">
+                <h4>Copyright &copy; 2024.All rights reservered.</h4>
+                <div>
+                    <img src="{% static 'images/Lajfort-foot-youtube.png' %}" class="social" alt="">
+                    <img src="{% static 'images/Lajfort-foot-instagram.png' %}" class="social" alt="">
+                    <img src="{% static 'images/Lajfort-foot-facebook.png' %}" class="social" alt="">
+                    <img src="{% static 'images/Lajfort-foot-twitter.png' %}" class="social" alt="">
                 </div>
             </div>
-        </div>
-        <hr>
-        <div class="copyright">
-            <h4>Copyright &copy; 2024.All rights reservered.</h4>
-            <div>
-                <img src="{% static 'images/Lajfort-foot-youtube.png' %}" class="social" alt="">
-                <img src="{% static 'images/Lajfort-foot-instagram.png' %}" class="social" alt="">
-                <img src="{% static 'images/Lajfort-foot-facebook.png' %}" class="social" alt="">
-                <img src="{% static 'images/Lajfort-foot-twitter.png' %}" class="social" alt="">
-            </div>
-        </div>
-    </footer>
-</body>
+        </footer>
+    </body>
 
 </html>
