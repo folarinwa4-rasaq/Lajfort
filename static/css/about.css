@@ -1,9 +1,9 @@
 .about-img {
     width: 100%;
+    object-fit: cover;
     height: 350px;
-    margin-top: 0px;
-    object-fit: contain;
     position: relative;
+
 }
 
 .us {
@@ -68,7 +68,7 @@ p {
 .vision-img {
     height: 300px;
     width: 500px;
-    object-fit: contain;
+    /* object-fit: contain; */
     margin-right: 150px;
 }
 
@@ -107,17 +107,24 @@ p {
 
 .mis-img {
     margin-top: -250px;
-    object-fit: contain;
+    /* object-fit: contain; */
 }
 
 .main-about {
-    margin-top: -50px;
+    /* margin-top: -50px; */
+    text-align:center ;
+    font-size: 20px;
+    line-height: 25px;
+    max-width: 1000px;
+    margin: auto;
+    margin-bottom: 5rem;
+    
 }
 
 @media (max-width:600px) {
     .about-img {
         width: 100%;
-        object-fit: contain;
+        /* object-fit: contain; */
     }
     .vision {
         display: block;
@@ -138,7 +145,7 @@ p {
     .vision-img {
         height: 300px;
         width: 300px;
-        object-fit: contain;
+        /* object-fit: contain; */
         margin-top: 50px;
     }
     .mission-img {
