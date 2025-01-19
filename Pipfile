@@ -11,6 +11,9 @@ dj-database-url = "*"
 python-decouple = "*"
 gunicorn = "*"
 whitenoise = "*"
+cloudinary = "*"
+django-cloudinary-storage = "*"
+django-tailwind = "*"
 
 [dev-packages]
 
