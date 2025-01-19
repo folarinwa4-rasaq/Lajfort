@@ -33,3 +33,26 @@ h1 {
 #gal {
     text-transform: capitalize;
 }
+
+@media (max-width:600px) {
+    .gallery-img {
+        display: grid;
+        grid-template-columns: 120px 120px;
+        row-gap: 10px;
+        column-gap: 10px;
+        place-items: center;
+        place-content: center;
+        padding: 20px;
+        width: 250px;
+    }
+    .gallery-pics {
+        height: 150px;
+        width: 120px;
+    }
+    #gal {
+        width: 250px;
+    }
+    .gal-head {
+        margin-left: -250px;
+    }
+}

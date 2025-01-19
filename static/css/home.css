@@ -448,10 +448,10 @@ table {
 }
 
 #main {
+    padding: 0 230px 0 230px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 230px 0 230px;
 }
 
 td {
@@ -476,4 +476,155 @@ td {
 
 #principal-sec h4 {
     text-transform: capitalize;
+}
+
+
+/*responsiveness*/
+
+@media (max-width:600px) {
+    .home-about-img,
+    .home-img-div {
+        height: 250px;
+        width: 90%;
+    }
+    .laj-logo {
+        height: 50px;
+    }
+    ul {
+        margin-left: -50px;
+    }
+    li {
+        margin-left: 20px;
+    }
+    .Welcome {
+        margin-left: -50px;
+    }
+    .Welcome h1 {
+        font-weight: 500;
+        font-size: 29px;
+        margin-top: 0;
+    }
+    .Welcome p {
+        font-size: 16px;
+        font-weight: 350;
+        margin-top: -25px;
+        margin-top: 10px;
+    }
+    .home-about {
+        display: grid;
+        place-content: center;
+        padding: 50px;
+    }
+    .foot-right {
+        display: none;
+    }
+    .copyright {
+        padding: 0;
+    }
+    .home-img-div {
+        padding-left: 50px;
+    }
+    .home-about-img {
+        width: 300px;
+    }
+    .home-about-text {
+        padding-left: 50px;
+    }
+    .h-a-text {
+        width: 350px;
+    }
+    .home-gallery-img {
+        display: grid;
+        grid-template-columns: 120px 120px;
+        row-gap: 10px;
+        column-gap: 10px;
+        place-content: center;
+    }
+    .home-gallery-pics {
+        width: 120px;
+        height: 100px;
+    }
+    /* message */
+    .message {
+        display: block;
+        margin-left: 20px;
+    }
+    .send {
+        margin-left: 20px;
+    }
+    .con {
+        margin-right: 50px;
+    }
+    .message-box {
+        width: 250px;
+        display: block;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .message-name {
+        height: 35px;
+        width: 200px;
+        margin-bottom: 25px;
+    }
+    .message-email {
+        height: 35px;
+        width: 200px;
+        margin-bottom: 25px;
+    }
+    .message-content {
+        height: 100px;
+        width: 200px;
+    }
+    .staff {
+        height: auto;
+        display: block;
+        margin-top: 100px;
+        padding-left: 10px;
+        padding-bottom: 30px;
+    }
+    .personnel-pics {
+        display: none;
+    }
+    .right-part {
+        margin-right: -30px;
+    }
+    .vice-principal {
+        width: 300px;
+        height: 280px;
+        margin-top: 50px;
+    }
+    .founder {
+        width: 300px;
+        height: 280px;
+        margin-bottom: 0px;
+        margin-top: 30px;
+    }
+    .principal {
+        width: 300px;
+        height: 280px;
+        margin-top: -85px;
+    }
+    .head-teacher {
+        width: 300px;
+        height: 280px;
+        margin-left: 10px;
+        margin-top: 50px;
+    }
+    #main {
+        padding: 0;
+    }
+    #principal-sec {
+        width: 300px;
+        text-align: start;
+        margin-left: 0px;
+    }
+    table,
+    tr,
+    th,
+    td {
+        width: 300px;
+    }
+    .career {
+        padding: 20px;
+    }
 }

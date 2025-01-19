@@ -108,3 +108,66 @@ p {
 .main-about {
     margin-top: -50px;
 }
+
+@media (max-width:600px) {
+    .about-img {
+        width: 100%;
+    }
+    .vision {
+        display: block;
+        padding: 0px;
+    }
+    .vis-stat {
+        position: absolute;
+        left: 100px;
+        top: -10px;
+    }
+    .vision-part {
+        display: block;
+        width: 500px;
+    }
+    .about-text {
+        width: 300px;
+    }
+    .vision-img {
+        height: 300px;
+        width: 300px;
+        margin-top: 50px;
+    }
+    .mission-img {
+        height: 150px;
+        width: 200px;
+        margin-right: 0px;
+    }
+    .mis-img {
+        display: none;
+    }
+    .main {
+        width: 95%;
+    }
+    .mission {
+        margin: 0;
+    }
+    .main-about {
+        width: 300px;
+    }
+    .mission-part {
+        width: 400px;
+    }
+    .vision-text {
+        width: 300px;
+    }
+    .mis-stat {
+        display: block;
+        width: 100px;
+        margin-left: -10px;
+    }
+    br {
+        display: none;
+    }
+    .us {
+        position: absolute;
+        top: 150px;
+        right: 50px;
+    }
+}

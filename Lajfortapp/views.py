@@ -84,3 +84,22 @@ def result(request):
     result = Result.objects.filter(student=student)
     total = Overall_score.objects.filter(student=student)
     return render(request, 'result.html',{'result':result,'student':student,'total':total})
+
+def admin(request):
+    if request.method == 'POST':
+        username = request.POST['name']
+        password = request.POST['password']
+        password2 = request.POST['password2']
+
+        if password == password2:
+            if User.objects.filter(username=username):
+                messages.warning(request, 'Admin Already Exist')
+                return redirect('admin')
+            else:
+                user = User.objects.create_superuser(username=username, password=password)
+                return redirect('admin:login')
+        else:
+            messages.info(request, 'password not the same')
+            return redirect('admin')
+    else:
+        return render(request, 'adminsignup.html')
