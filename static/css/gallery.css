@@ -7,12 +7,14 @@
 .gallery-img {
     display: grid;
     grid-template-columns: 360px 360px 360px;
+    object-fit: contain;
     row-gap: 30px;
     column-gap: 30px;
     place-items: center;
     padding: 20px;
-    width: 1150px;
-    margin-left: -65px;
+    margin: auto;
+    width: 100%;
+    max-width: 1150px;
     background: linear-gradient(180deg, #FFFDC7 37.4%, #29166E 104.1%);
 }
 
@@ -32,6 +34,7 @@ h1 {
 
 #gal {
     text-transform: capitalize;
+    text-align: center;
 }
 
 @media (max-width:600px) {
@@ -50,7 +53,8 @@ h1 {
         width: 120px;
     }
     #gal {
-        width: 250px;
+        max-width: 250px;
+        width: 100%;
     }
     .gal-head {
         margin-left: -250px;

@@ -58,6 +58,7 @@ a {
 
 .Welcome {
     padding-left: 50px;
+    color: #fff;
 }
 
 .Welcome h3 {
@@ -70,6 +71,7 @@ a {
     font-weight: 700;
     font-size: 84px;
     margin-top: 0;
+
 }
 
 .Welcome p {
@@ -93,6 +95,7 @@ a {
 .home-about-img {
     height: 450px;
     width: 600px;
+    object-fit: contain;
 }
 
 .home-about-text {
@@ -228,6 +231,7 @@ small {
 
 .home-gallery-img {
     display: grid;
+    object-fit: contain;
     grid-template-columns: 380px 380px 380px;
     row-gap: 25px;
     column-gap: 25px;
@@ -306,6 +310,7 @@ small {
 
 .contact-img {
     width: 100%;
+    object-fit: contain;
     margin-top: -56px;
 }
 
@@ -334,6 +339,7 @@ small {
 
 .con-img {
     margin-right: 10px;
+    object-fit: contain;
 }
 
 .con {
@@ -485,6 +491,7 @@ td {
     .home-about-img,
     .home-img-div {
         height: 250px;
+        object-fit: contain;
         width: 90%;
     }
     .laj-logo {
@@ -523,9 +530,11 @@ td {
     }
     .home-img-div {
         padding-left: 50px;
+        object-fit: contain;
     }
     .home-about-img {
         width: 300px;
+        object-fit: contain;
     }
     .home-about-text {
         padding-left: 50px;
@@ -539,6 +548,7 @@ td {
         row-gap: 10px;
         column-gap: 10px;
         place-content: center;
+        object-fit: contain;
     }
     .home-gallery-pics {
         width: 120px;
