@@ -96,7 +96,7 @@ a {
     padding: 25px;
     background-color: rgba(41, 22, 110, 1);
     color: white;
-    justify-content: space-between;
+
 }
 
 .home-about-div {
@@ -505,7 +505,14 @@ td {
 
 @media (max-width:600px) {
 
-    .home-about-img,
+    
+.home-about-div {
+    display: flex ;
+    flex-direction: column;
+   
+   
+}
+    .home-about-img
     .home-img-div {
         height: 250px;
         object-fit: contain;
@@ -541,11 +548,11 @@ td {
         margin-top: 10px;
     }
 
-    .home-about {
+    /* .home-about {
         display: grid;
         place-content: center;
         padding: 50px;
-    }
+    } */
 
     .foot-right {
         display: none;
